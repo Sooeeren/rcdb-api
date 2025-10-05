@@ -2,17 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/main.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["dist/**", "db/**"]
-      }
+      "src": "/api/**/*.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "dist/main.js"
+      "src": "/api/coasters/random",
+      "dest": "/api/coasters.js"
+    },
+    {
+      "src": "/api/coasters/stat/(?<stat>[^/]+)",
+      "dest": "/api/coasters.js"
+    },
+    {
+      "src": "/api/coasters/(?<id>\\d+)",
+      "dest": "/api/coasters.js"
     }
   ]
 }

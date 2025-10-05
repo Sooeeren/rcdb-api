@@ -1,38 +1,7 @@
 {
-  "name": "express-server-ts",
+  "name": "coaster-data-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "rm -rf dist && tsc && tsc-alias",
-    "start:prod": "node dist/main.js",
-    "start:dev": "nodemon",
-    "scrape": "ts-node -r tsconfig-paths/register ./src/scraping/main.ts && npm run scrape:map-coaster-photos",
-    "scrape:theme-parks": "ts-node -r tsconfig-paths/register ./src/scraping/scrape-theme-parks",
-    "scrape:map-coaster-photos": "ts-node -r tsconfig-paths/register ./src/scraping/map-coaster-photos.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "1.2.2",
-    "cheerio": "1.0.0-rc.12",
-    "cli-progress": "3.11.2",
-    "commander": "9.5.0",
-    "cors": "2.8.5",
-    "dotenv": "16.0.3",
-    "express": "4.18.2",
-    "reflect-metadata": "0.1.13"
-  },
-  "devDependencies": {
-    "@types/cli-progress": "3.11.0",
-    "@types/cors": "2.8.13",
-    "@types/express": "4.17.15",
-    "@types/node": "18.11.18",
-    "nodemon": "2.0.20",
-    "ts-node": "10.9.1",
-    "tsc-alias": "1.8.2",
-    "tsconfig-paths": "4.1.1",
-    "typescript": "4.9.4"
-  }
+  "description": "An API to serve roller coaster data for the Coaster Battle game.",
+  "main": "api/coasters.js",
+  "private": true
 }
